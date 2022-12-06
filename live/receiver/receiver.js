@@ -7,7 +7,7 @@ window.onload = function(){
   this.build = null
   const mapLayer = document.getElementById('mapLayer')
   const map = L.map(mapLayer)
-  const zoom = 15
+  const zoom = 22
   let marked = false
   let marker = null
 
