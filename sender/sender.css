@@ -1,0 +1,39 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+#mainContent{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:5px;
+  height:100vh;
+  width:100vw;
+  background-color:black;
+  color:ghostwhite;
+  font-family:Arial;
+}
+
+hr{
+  width:360px;
+  margin-bottom:25px;
+  border-color:crimson;
+}
+
+#mainTitle{
+  margin-bottom:5px;
+}
+
+button{
+  width:60px;
+  height:30px;
+  border-radius:10px;
+  margin-bottom:30px;
+  font-weight:550;
+}
+
+button:hover{
+    cursor:pointer;
+}
