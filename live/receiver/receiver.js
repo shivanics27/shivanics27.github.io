@@ -35,7 +35,7 @@ window.onload = function(){
         fetch('https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat='+lat+'&'+'lon='+long)
         .then(datum=>datum.json())
         .then(json=>{
-          address = json.address.road + ',<br>' + json.address.city_district + ',<br>' + json.address.city
+          address = json.address.road + ',<br>' + json.address.city_district + ',<br>' + json.address.city + ' - ' + json.address.postcode
           marker.bindPopup('<b>'+address+'</b><br>').openPopup();
         })
       } else {
