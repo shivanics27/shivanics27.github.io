@@ -7,7 +7,7 @@ window.onload = function(){
   this.build = null
   const mapLayer = document.getElementById('mapLayer')
   const map = L.map(mapLayer)
-  const zoom = 22
+  const zoom = 14
   let marked = false
   let marker = null
 
@@ -19,6 +19,7 @@ window.onload = function(){
     let fid = '1oQovztzLCfHR7q_9IJk3P2eodiBQO9yH0wEnllnnFXc'
     let gid = '1595784905'
     let url = 'https://docs.google.com/spreadsheets/d/'+fid+'/gviz/tq?tqx=out:json&tq&gid='+gid
+    let address = null
     fetch(url)
     .then(response=>response.text())
     .then((data)=>{
@@ -27,11 +28,16 @@ window.onload = function(){
       const coord = lastLocation.c[1].v
       const lat = coord.substr(0,coord.indexOf(','))
       const long = coord.substr(coord.indexOf(',') + 1,coord.length - 1)
-      map.setView(L.latLng(lat,long),zoom)
       if(!marked){
+        map.setView(L.latLng(lat,long),zoom)
         marked = true
         marker = L.marker([lat,long]).addTo(map)
-        marker.bindPopup("<b>Vehicle location</b><br>").openPopup();
+        fetch('https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat='+lat+'&'+'lon='+long)
+        .then(datum=>datum.json())
+        .then(json=>{
+          address = json.address.road + ',<br>' + json.address.city_district + ',<br>' + json.address.city
+          marker.bindPopup('<b>'+address+'</b><br>').openPopup();
+        })
       } else {
         marker.setLatLng([lat,long])
       }
