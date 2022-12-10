@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Live Location Receiver</title>
+        <link rel="stylesheet" href="receiver.css">
+        <script src="receiver.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="../map-pin-svg-icon.ico">
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    </head>
+    <body>
+        <div id="mainContent">
+        <h2 id="mainTitle">Live Location</h2>
+        <hr>
+        <div id="buttonsDiv">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <button id="clearBtn" disabled>Clear</button>
+        </div>
+        <div id="mapLayer"></div>
+        </div>
+    </body>
+</html>
