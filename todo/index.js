@@ -55,18 +55,6 @@ todoList.addEventListener('click',(e)=>{
   }
 })
 
-todoList.addEventListener('mouseover',(e)=>{
-  if(e.target.className == 'removeItem'){
-    e.target.src = 'images/remove hover.png'
-  }
-})
-
-todoList.addEventListener('mouseout',(e)=>{
-  if(e.target.className == 'removeItem'){
-    e.target.src = 'images/remove.png'
-  }
-})
-
 function save(){
     localStorage.setItem('content',document.getElementById('todoList').innerHTML)
 }
