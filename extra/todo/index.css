@@ -1,0 +1,132 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins, Roboto, Arial, sans-serif;
+}
+
+#main{
+  width:640px;
+  min-height:512px;
+  margin:32px auto;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0px 0px 8px 2px rgba(120,120,120,0.75);
+  background-color:rgba(175,175,175,0.125);
+  backdrop-filter:blur(100px);
+}
+
+#todoHeading{
+  border:4px solid red;
+  width:100%;
+  height:64px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  border:4px solid rgba(250,0,50,0.125);
+  background:linear-gradient(135deg, #e3ffe7 10%, #d9e7ff 100%);
+}
+
+#todoAdder{
+  border-bottom:3px solid teal;
+  width:100%;
+  height:64px;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding:16px 0px;
+  box-sizing:content-box;
+}
+
+#todoList{
+  list-style:none;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  font-size:28px;
+  padding:24px;
+}
+
+#todoInput{
+  height:48px;
+  border-radius:24px;
+  width:480px;
+  outline:none;
+  border:none;
+  background-color:rgba(120,120,120,0.75);
+  padding:24px;
+  color:ghostwhite;
+}
+
+#todoInput::placeholder{
+  color:rgb(220,220,220);
+}
+
+#todoAdd{
+  width:96px;
+  height:48px;
+  border-radius:32px;
+  outline:none;
+  border:none;
+  background-color:crimson;
+  font-size:20px;
+  cursor:pointer;
+  color:ghostwhite;
+}
+
+#todoAdd:hover{
+  background-image:linear-gradient(rgba(213,51,105,0.85) 10%, rgba(218,174,81,0.25) 90%);
+  box-shadow:0px 2px 8px 4px rgba(55,25,25,0.25);
+}
+
+#todoList li{
+  margin-bottom:16px;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+  align-items:center;
+  border-bottom:2px solid rgba(105,105,105,0.35);
+  padding:2px;
+  padding-bottom:8px;
+}
+
+#todoList li span{
+  flex-grow:2;
+  cursor:pointer;
+  max-width:496px;
+}
+
+.finished span{
+  text-decoration:line-through;
+}
+
+.unfinished span{
+  text-decoration:none;
+}
+
+.removeItem{
+  max-width:32px;
+  max-height:32px;
+  border-radius:50%;
+  outline:none;
+  border:none;
+  background-image:radial-gradient(#d53369 10%, #daae51 100%);
+  backdrop-filter:blur(50%);
+  box-shadow:0px 2px 4px 2px rgba(55,25,25,0.45);
+}
+
+.unchecked, .checked{
+  width:32px;
+  height:32px;
+  cursor:pointer;
+  border-radius:50%;
+  margin-right:12px;
+  backdrop-filter:blur(50%);
+  box-shadow:0px 2px 4px 2px rgba(55,25,25,0.45);
+}
+
+#todoIcon{
+  width:40px;
+  margin-left:8px;
+}
