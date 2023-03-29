@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <title>To-Do List</title>
+</head>
+
+<body>
+  <div id="main">
+  <div id="todoHeading">
+    <h2 id="todoTitle">To-Do List</h2>
+    <img src="images/logo.png" alt="" id="todoIcon">
+  </div>
+  <div id="todoAdder">
+    <input type="text" id="todoInput" placeholder="Add things to do!">
+    <button id="todoAdd">ADD</button>
+  </div>
+  <ul id="todoList">
+    <li class="unfinished">
+      <img src="images/unchecked.png" class="unchecked">
+      <span>Item 1</span>
+      <img src="images/remove.png" alt="" class="removeItem">
+    </li>
+    <li class="unfinished">
+      <img src="images/unchecked.png" class="unchecked">
+      <span>Item 2</span>
+      <img src="images/remove.png" alt="" class="removeItem">
+    </li>
+    <li class="unfinished">
+      <img src="images/unchecked.png" class="unchecked">
+      <span>Item 3</span>
+      <img src="images/remove.png" alt="" class="removeItem">
+    </li>
+    <li class="unfinished">
+      <img src="images/unchecked.png" class="unchecked">
+      <span>A very long item that won't fit and will have to wrap around to the next line</span>
+      <img src="images/remove.png" alt="" class="removeItem">
+    </li>
+  </ul>
+</div>
+  <script src="index.js"></script>
+</body>
+</html>
