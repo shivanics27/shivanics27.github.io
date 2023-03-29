@@ -1,0 +1,87 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <title>Weather</title>
+</head>
+
+<body>
+  <div id="content">
+  <div id="weatherTitle">
+    <img src="images/logo.png" alt="Weather Logo" id="weatherTitleIcon1">
+    <h1 id="weatherTitleValue">Weather</h1>
+    <img src="images/logo 2.png" alt="Weather Logo" id="weatherTitleIcon2">
+  </div>
+  <div id="search">
+    <input type="text" id="searchBox" placeholder="Enter City">
+    <img src="images/search location.png" alt="Search Location" id="searchIcon"></img>
+  </div>
+  <div id="autocomplete">
+      <p id="place1">Bangalore</p>
+      <p id="place2">Delhi</p>
+      <p id="place3">Lucknow</p>
+      <p id="place4">Ahmedabad</p>
+      <p id="place5">Allahabad</p>
+      <p id="place6">Bhopal</p>
+      <p id="place7">Chennai</p>
+      <p id="place8">Mumbai</p>
+    </div>
+  <div id="weatherInfo">
+    <div id="weatherToday">
+      <div id="temperatureDetails">
+        <img src="images/clouds/default.png" alt="Today's Weather" id="weatherIcon">
+        <div id="temperature">
+          <img src="images/temperature.png" alt="Temperature" id="temperatureIcon">
+          <h3 id="temperatureValue">22&#176C</h3>
+        </div>
+        <div id="city">
+          <img src="images/location.png" alt="City" id="cityIcon">
+          <h3 id="cityName">Bangalore</h3>
+        </div>
+        <div id="dateToday">
+          <img src="images/date.png" alt="Today's Date" id="dateIcon">
+          <h4 id="dateValue">Sunday, 26 March</h4>
+        </div>
+      </div>
+      <hr>
+      <div id="otherDetails">
+        <div id="humidityDetails">
+          <img src="images/humidity.png" alt="Humidity" id="humidityIcon">
+          <h5 id="humidityLabel">Humidity</h5>
+          <p id="humidityValue">30%</p>
+        </div>
+        <hr>
+        <div id="windDetails">
+          <img src="images/windspeed.png" alt="Wind Speed" id="windIcon">
+          <h5 id="windLabel">Wind Speed</h5>
+          <p id="windValue">15 km/h</p>
+        </div>
+        <hr>
+        <div id="uvDetails">
+          <img src="images/uv index.png" alt="UV Index" id="uvIcon">
+          <h5 id="uvLabel">UV Index</h5>
+          <p id="uvValue">Low</p>
+        </div>
+        <hr>
+        <div id="airDetails">
+          <img src="images/air quality.png" alt="Air Quality Index" id="airIcon">
+          <h5 id="airLabel">Air Quality Index</h5>
+          <p id="airValue">Very High</p>
+        </div>
+      </div>
+    </div>
+    <div id="weatherForecast"></div>
+  </div>
+</div>
+  <script src="index.js"></script>
+</body>
+
+</html>
